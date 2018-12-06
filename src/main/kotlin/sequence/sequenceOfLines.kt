@@ -11,6 +11,6 @@ fun sequenceOfLines(fileName: String) = sequence<String> {
 }
 
 fun main(args: Array<String>) {
-    sequenceOfLines("examples/sequence/sequenceOfLines.kt")
+    sequenceOfLines("src/main/kotlin/sequence/sequenceOfLines.kt")
             .forEach(::println)
 }

@@ -9,7 +9,7 @@ import java.nio.file.*
 
 fun main(args: Array<String>) {
     launch(Swing) {
-        val fileName = "examples/io/io.kt"
+        val fileName = "src/main/kotlin/io/io.kt"
         log("Asynchronously loading file \"$fileName\" ...")
         val channel = AsynchronousFileChannel.open(Paths.get(fileName))
         try {
