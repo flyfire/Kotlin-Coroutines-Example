@@ -23,7 +23,7 @@ suspend fun 我要开始加载图片啦(url: String): ByteArray = suspendCorouti
     try {
         val response = HttpService.service.getLogo(url).execute()
         if (response.isSuccessful) {
-            response.body()?.byteStream().readBytes().let(continuation::resume)
+            response.body()?.byteStream()?.readBytes()?.let(continuation::resume)
         } else {
             continuation.resumeWithException(HttpException(response.code()))
         }

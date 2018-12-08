@@ -17,7 +17,7 @@ interface Service {
 
 object HttpService {
     val service by lazy {
-        val retrofit = Retrofit.Builder().build()
+        val retrofit = Retrofit.Builder().baseUrl("http://www.qq.com").build()
 
         retrofit.create(Service::class.java)
     }
