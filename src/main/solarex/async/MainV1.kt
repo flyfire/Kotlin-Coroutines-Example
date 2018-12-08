@@ -1,8 +1,11 @@
-package ui
+package async
 
 import basic.我要开始加载图片啦
+import basic.我要开始协程啦
 import basic.我要开始协程拉
+import basic.我要开始异步加载图片啦
 import common.log
+import ui.MainWindow
 import java.awt.Window
 import javax.swing.JFrame.EXIT_ON_CLOSE
 
@@ -23,9 +26,9 @@ fun main(args: Array<String>) {
 
     frame.onButtonClick {
         log("协程之前")
-        我要开始协程拉 {
+        我要开始协程啦 {
             log("协程内部")
-            val imageData = 我要开始加载图片啦(AVASTAR_URL)
+            val imageData = 我要开始异步加载图片啦(AVASTAR_URL)
             log("获取到图片数据")
             frame.setLogo(imageData)
         }
