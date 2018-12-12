@@ -5,53 +5,59 @@ package compare
  * Desc:
  */
 fun main(args: Array<String>) {
-    val str = "solarex"
+    TestCompare().test()
+}
 
-    val letResult = str.let {
-        println("let----------")
-        println(this)
-        println(it)
-        println("let----------")
-        0
-    }
+class TestCompare {
+    fun test() {
+        val str = "solarex"
 
-    val runResult = str.run {
-        println("run-------")
-        println(this)
-        println(it)
-        println("run-------")
-        1
-    }
+        val letResult = str.let {
+            println("let----------")
+            println(this)
+            println(it)
+            println("let----------")
+            0
+        }
 
-    val run0Result = run {
-        println("run0000000000")
-        println(this)
-        println(it)
-        println("run0000000000")
-        2
-    }
+        val runResult = str.run {
+            println("run-------")
+            println(this)
+//            println(it)
+            println("run-------")
+            1
+        }
 
-    val withResult = with(str) {
-        println("with---------")
-        println(this)
-        println(it)
-        println("with---------")
-        3
-    }
+        val run0Result = run {
+            println("run0000000000")
+            println(this)
+//            println(it)
+            println("run0000000000")
+            2
+        }
 
-    val applyResult = str.apply {
-        println("apply------------")
-        println(this)
-        println(it)
-        println("apply------------")
-        5
+        val withResult = with(str) {
+            println("with---------")
+            println(this)
+//            println(it)
+            println("with---------")
+            3
+        }
+
+        val applyResult = str.apply {
+            println("apply------------")
+            println(this)
+//            println(it)
+            println("apply------------")
+            5
+        }
+        val alsoResult = str.also {
+            println("also----------")
+            println(this)
+            println(it)
+            println("also----------")
+            6
+        }
+        println("let = $letResult,run = $runResult, run0 = $run0Result, with = $withResult, apply = $applyResult, also = $alsoResult")
     }
-    val alsoResult = str.also {
-        println("also----------")
-        println(this)
-        println(it)
-        println("also----------")
-        6
-    }
-    println("let = $letResult,run = $runResult, run0 = $run0Result, with = $withResult, apply = $applyResult, also = $alsoResult")
 }
