@@ -1,4 +1,4 @@
-package sequence.optimized
+package compare.optimized
 
 val fibonacci: Sequence<Int> = sequence {
     yield(1) // first Fibonacci number

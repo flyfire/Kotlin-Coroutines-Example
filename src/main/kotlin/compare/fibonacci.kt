@@ -1,4 +1,4 @@
-package sequence
+package compare
 
 // inferred type is Sequence<Int>
 val fibonacci = sequence {

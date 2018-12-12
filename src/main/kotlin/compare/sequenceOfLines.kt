@@ -1,4 +1,4 @@
-package sequence
+package compare
 
 import java.io.*
 
@@ -11,6 +11,6 @@ fun sequenceOfLines(fileName: String) = sequence<String> {
 }
 
 fun main(args: Array<String>) {
-    sequenceOfLines("src/main/kotlin/sequence/sequenceOfLines.kt")
+    sequenceOfLines("src/main/kotlin/compare/sequenceOfLines.kt")
             .forEach(::println)
 }

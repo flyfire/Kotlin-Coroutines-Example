@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
         }
         // simulate async work by sleeping randomly
         val random = Random()
-        // consume asynchronous sequence with a regular for loop
+        // consume asynchronous compare with a regular for loop
         for (value in seq) {
             log("Consumer got value = $value")
             val consumerSleep = random.nextInt(1000).toLong()

@@ -1,6 +1,6 @@
-package sequence.optimized
+package compare.optimized
 
-import sequence.*
+import compare.*
 import kotlin.coroutines.*
 import kotlin.coroutines.intrinsics.*
 

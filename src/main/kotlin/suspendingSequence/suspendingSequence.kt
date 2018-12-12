@@ -39,7 +39,7 @@ class SuspendingIteratorCoroutine<T>(
 
     var state: State = State.INITIAL
     var nextValue: T? = null
-    var nextStep: Continuation<Unit>? = null // null when sequence complete
+    var nextStep: Continuation<Unit>? = null // null when compare complete
 
     // if (state == COMPUTING_NEXT) computeContinuation is Continuation<T>
     // if (state == COMPUTING_HAS_NEXT) computeContinuation is Continuation<Boolean>

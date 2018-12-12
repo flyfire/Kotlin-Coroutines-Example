@@ -1,4 +1,4 @@
-package sequence
+package compare
 
 import kotlin.coroutines.*
 import kotlin.experimental.*
