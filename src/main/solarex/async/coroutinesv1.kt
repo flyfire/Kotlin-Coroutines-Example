@@ -16,16 +16,16 @@ import kotlin.coroutines.suspendCoroutine
  * Created by houruhou on 2018/12/6.
  * Desc:
  */
-fun 我要开始协程啦(block: suspend () -> Unit) {
+fun 开始协程V1(block: suspend () -> Unit) {
     block.startCoroutine(BaseContinuationV1())
 }
 
-suspend fun 我要开始异步加载图片啦(url: String): ByteArray = suspendCoroutine { continuation ->
-    log("异步任务开始前")
+suspend fun 开始异步加载图片V1(url: String): ByteArray = suspendCoroutine { continuation ->
+    log("异步任务开始前V1")
     AsyncTask {
         val uiContinuationV1 = UiContinuationWrapper(continuation)
         try {
-            log("耗时操作开始，下载图片")
+            log("耗时操作开始，下载图片V1")
             val response = HttpService.service.getLogo(url).execute()
             if (response.isSuccessful) {
                 response.body()?.byteStream()?.readBytes()?.let(uiContinuationV1::resume)
